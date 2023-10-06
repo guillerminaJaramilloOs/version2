@@ -53,7 +53,7 @@ steps:
 
 #Publicar resultados de prueba
 # do this after your tests have run
-- script: dotnet test <test-project> --logger trx
+- script: dotnet test PrimerHolaMundo.csproj --logger trx
 - task: PublishTestResults@2
   condition: succeededOrFailed()
   inputs:
