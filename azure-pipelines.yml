@@ -43,4 +43,10 @@ steps:
     custom: tool
     arguments: 'install -g dotnetsay'
 
-    
+ #Ejecucióndepruebas
+# do this after other tasks such as building
+- task: DotNetCoreCLI@2
+  inputs:
+    command: test
+    projects: '**/*Tests/*.csproj'
+    arguments: '--configuration $(buildConfiguration)'
